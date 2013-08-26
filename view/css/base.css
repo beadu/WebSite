@@ -1,0 +1,19 @@
+﻿body { margin: 0; height: 100%; font-size: 18px; }
+html { height: 100%; }
+form { text-align: right; width: 100%; }
+/*兼容firefox的div高度100%*/
+a { color: #808080; margin: 5px; text-decoration: none; }
+.logo { position: absolute; padding: 0px 10px 0px 10px; top: 0; left: 0; width: 300px; height: 30px; background-color: #F4F4F4; border-bottom: 1px solid #CACACA; font-size: 28px; }
+.nav { margin-left: 300px; padding: 5px 10px 0px 10px; height: 25px; background-color: #F4F4F4; border-bottom: 1px solid #CACACA; text-align: right; }
+.shorts { height: 25px; margin-left: 130px; padding: 5px; position: fixed; top: -1px; width: 100%; }
+.main { margin: 0 auto; margin-top: 10px; width: 1000px; }
+.shops { border: 1px solid #CACACA; width: 1000px; }
+    .shops .title { background-color: #F4F4F4; border-bottom: 1px solid #CACACA; height: 20px; left: -1px; padding: 5px; top: -1px; width: 990px; }
+        .shops .title .text { float: left; }
+        .shops .title .more { float: right; }
+    .shops .content { padding: 5px; }
+div.submit { text-align: center; }
+.rb { border: 1px solid red; }
+.hid { visibility: hidden; }
+.msg { color: red; text-decoration: underline; }
+.error { color: red; }

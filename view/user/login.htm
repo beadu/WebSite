@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="../css/base.css" rel="stylesheet" />
+    <link href="../css/user/login.css" rel="stylesheet" />
+    <title>欢迎加入--Beadu</title>
+    <script type="text/javascript" src="../js/jquery-2.0.0.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#login").click(function () {
+                $("#uname").removeClass("rb");
+                $("#pwd").removeClass("rb");
+                $(".msg").val("");
+                if ($("#uname").val().trim() == "") {
+                    $("#uname").addClass("rb");
+                    $(".msg").html("请输入您的用户名");
+                }
+                if ($("#pwd").trim() == "") {
+                    $("#pwd").addClass("rb");
+                    $(".msg").html($(".msg").html() == "" ? "请输入您的密码" : $(".msg").html() + "和密码");
+                }
+                if ($(".msg").html() != "") return;
+                post("/login", { name: $("#uname").val(), pwd: $("#pwd").val });
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="logo"><a href="../index.htm">Beadu.com</a></div>
+    <div class="nav"><a href="reg.htm">注册</a></div>
+    <div class="main">
+        <form>
+            <div class="login">
+                <ul>
+                    <li>用户：</li>
+                    <li>
+                        <input id="uname" type="text" />
+                    </li>
+                </ul>
+                <ul>
+                    <li>密码：</li>
+                    <li>
+                        <input id="pwd" type="password" />
+                    </li>
+                </ul>
+                <div class="submit">
+                    <input id="login" type="button" value="确定" /><span class="msg"></span>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
